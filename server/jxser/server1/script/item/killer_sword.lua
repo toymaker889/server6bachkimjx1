@@ -1,6 +1,6 @@
 Include( "\\script\\lib\\string.lua" )
 Include( "\\script\\event\\laborday\\labordayhead.lua" )
---¼ÓÈëÎåÒ»½Ú»î¶¯
+--åŠ å…¥äº”ä¸€èŠ‚æ´»åŠ¨
 --By LiuKuo 2005.4.21
 
 if LABORDAYSWITCH then
@@ -9,15 +9,15 @@ end
 
 function main( nItemIdx )
 	local nowDate = tonumber(date("%Y%m%d%H%M%S"));
-	if(nowDate >= 20051006080000) then
-		Msg2Player("Ho¹t ®éng Boss hoµng Kim ®· kÕt thóc!");
+	if(nowDate >= 21001006080000) then
+		Msg2Player("Hoç®ƒ î‡€ng Boss hoç¥…g Kim î† kèª¸ théª³!");
 		return 1
 	end	
 	if LABORDAYSWITCH then
 		local _, _, _, nLevel, nSeries = GetItemProp( nItemIdx );
 		return 	CallBoss( nLevel, nSeries )
 	else 
-		Msg2Player("Ho¹t ®éng Boss hoµng Kim ®· kÕt thóc!");
+		Msg2Player("Hoç®ƒ î‡€ng Boss hoç¥…g Kim î† kèª¸ théª³!");
 		return 1
 	end	
 end
@@ -25,6 +25,6 @@ end
 function GetDesc( nItemIdx )
 	local strDesc = "";
 	local _, _, _, nLevel, nSeries = GetItemProp( nItemIdx );
-	strDesc = "<enter>"..strDesc.."Thuéc tİnh ngò hµnh:"..toSeries( nSeries ).."\n";
+	strDesc = "<enter>"..strDesc.."Thué– tè¼“h ngï¿½ hç¥…h:"..toSeries( nSeries ).."\n";
 	return strDesc;
 end
